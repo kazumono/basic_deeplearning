@@ -14,12 +14,22 @@ def OR( x_1, x_2):
 
     return u
 
-
-
 z1 = OR( x_1=0, x_2 = 0)
 y1 = step( x=z1)
 #print(z1, y1)
 
+
+# ORGATE
+def test(GATE):
+    for i in [0,1]:
+        for j in [0,1]:
+            z = GATE( x_1=i, x_2 = j)
+            y = step( x=z)
+            print("x_1={}, x_2={} : y={}".format( i , j, y))
+
+test(GATE = OR)
+
+# ANDGATE
 def test(GATE):
     for i in [0,1]:
         for j in [0,1]:
